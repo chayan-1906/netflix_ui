@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_ui/models/content_model.dart';
+import 'package:netflix_ui/widgets/responsive.dart';
+import 'package:video_player/video_player.dart';
 
 import 'vertical_icon_button.dart';
 
@@ -7,6 +9,20 @@ class ContentHeader extends StatelessWidget {
   final Content featuredContent;
 
   const ContentHeader({Key key, this.featuredContent}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Responsive(
+      mobile: _ContentHeaderMobile(featuredContent: featuredContent),
+      desktop: _ContentHeaderDesktop(featuredContent: featuredContent),
+    );
+  }
+}
+
+class _ContentHeaderMobile extends StatelessWidget {
+  final Content featuredContent;
+
+  const _ContentHeaderMobile({Key key, this.featuredContent}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -69,6 +85,149 @@ class ContentHeader extends StatelessWidget {
   }
 }
 
+class _ContentHeaderDesktop extends StatefulWidget {
+  final Content featuredContent;
+
+  const _ContentHeaderDesktop({Key key, this.featuredContent})
+      : super(key: key);
+
+  @override
+  State<_ContentHeaderDesktop> createState() => _ContentHeaderDesktopState();
+}
+
+class _ContentHeaderDesktopState extends State<_ContentHeaderDesktop> {
+  VideoPlayerController videoPlayerController;
+  bool isMute = true;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    videoPlayerController =
+        VideoPlayerController.network(widget.featuredContent.videoUrl)
+          ..initialize().then((value) => setState(() {}))
+          ..play();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    videoPlayerController.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () => videoPlayerController.value.isPlaying
+          ? videoPlayerController.pause()
+          : videoPlayerController.play(),
+      child: Stack(
+        alignment: Alignment.bottomLeft,
+        children: [
+          Container(
+            height: 500.0,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(widget.featuredContent.imageUrl),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          Container(
+            height: 500.0,
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Colors.black, Colors.transparent],
+                begin: Alignment.bottomCenter,
+                end: Alignment.topCenter,
+              ),
+            ),
+          ),
+          Positioned(
+            left: 60.0,
+            right: 60.0,
+            bottom: 150.0,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: 250.0,
+                  child: Image.asset(widget.featuredContent.titleImageUrl),
+                ),
+                const SizedBox(height: 15.0),
+                Text(
+                  widget.featuredContent.description,
+                  style: const TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.w500,
+                    shadows: [
+                      Shadow(
+                        color: Colors.black,
+                        offset: Offset(2.0, 4.0),
+                        blurRadius: 6.0,
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 20.0),
+                Row(
+                  children: [
+                    const _PlayButton(),
+                    const SizedBox(width: 16.0),
+                    ElevatedButton.icon(
+                      onPressed: () => print('More Info'),
+                      style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.fromLTRB(
+                          15.0,
+                          15.0,
+                          20.0,
+                          15.0,
+                        ),
+                        backgroundColor: Colors.white,
+                      ),
+                      icon: const Icon(
+                        Icons.info_outline_rounded,
+                        color: Colors.black,
+                      ),
+                      label: const Text(
+                        'More Info',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 20.0),
+                    if (videoPlayerController.value.isInitialized)
+                      IconButton(
+                        onPressed: () => setState(() {
+                          isMute
+                              ? videoPlayerController.setVolume(100)
+                              : videoPlayerController.setVolume(0);
+                          isMute = videoPlayerController.value.volume == 0;
+                        }),
+                        color: Colors.white,
+                        iconSize: 30.0,
+                        icon: Icon(
+                          isMute
+                              ? Icons.volume_off_rounded
+                              : Icons.volume_up_rounded,
+                          color: Colors.white,
+                        ),
+                      ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class _PlayButton extends StatelessWidget {
   const _PlayButton({Key key}) : super(key: key);
 
@@ -79,7 +238,7 @@ class _PlayButton extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(15.0, 15.0, 20.0, 15.0),
         backgroundColor: Colors.white,
       ),
-      onPressed: () {},
+      onPressed: () => print('Play'),
       icon: const Icon(Icons.play_arrow_rounded, color: Colors.black),
       label: const Text(
         'Play',
