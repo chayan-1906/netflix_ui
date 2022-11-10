@@ -18,10 +18,10 @@
 <table>
   <tr>
     <td>
-      <img width="1600" alt="MacOS Medium width" src="https://user-images.githubusercontent.com/82430454/201120339-e5bf2abf-562c-4d79-92ef-5d3676498c79.png">
+      <img width="1800" alt="MacOS Medium width" src="https://user-images.githubusercontent.com/82430454/201120339-e5bf2abf-562c-4d79-92ef-5d3676498c79.png">
     </td>
     <td>
-      <img width="1250" alt="MacOS Smallest Width" src="https://user-images.githubusercontent.com/82430454/201120378-b1a030da-99b3-48af-81dd-b71df3c6b4f4.png">
+      <img width="1600" alt="MacOS Smallest Width" src="https://user-images.githubusercontent.com/82430454/201120378-b1a030da-99b3-48af-81dd-b71df3c6b4f4.png">
     </td>
   </tr>
 </table>
@@ -32,10 +32,10 @@
 <table>
   <tr>
     <td>
-      <img width="450" alt="Mobile" src="https://user-images.githubusercontent.com/82430454/196758213-8dd8e8d5-7e02-4f3b-8609-c9d0cad78823.png">
+      <img width="300" alt="Mobile" src="https://user-images.githubusercontent.com/82430454/201121596-861dacb2-8c80-4809-b101-fae532dd7c9e.png">
     </td>
     <td>
-      <img width="450" alt="Mobile" src="https://user-images.githubusercontent.com/82430454/201121609-a3946f60-228b-46b2-a60f-95696528ce0e.png">
+      <img width="300" alt="Mobile" src="https://user-images.githubusercontent.com/82430454/201121609-a3946f60-228b-46b2-a60f-95696528ce0e.png">
     </td>
   </tr>
 </table>
