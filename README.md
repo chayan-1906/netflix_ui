@@ -32,15 +32,10 @@
 <table>
   <tr>
     <td>
-      <img width="1470" alt="Mobile" src="https://user-images.githubusercontent.com/82430454/196758213-8dd8e8d5-7e02-4f3b-8609-c9d0cad78823.png">
+      <img width="450" alt="Mobile" src="https://user-images.githubusercontent.com/82430454/196758213-8dd8e8d5-7e02-4f3b-8609-c9d0cad78823.png">
     </td>
-  </tr>
-</table>
-
-<table>
-  <tr>
     <td>
-      <img width="1470" alt="Mobile" src="https://user-images.githubusercontent.com/82430454/201121609-a3946f60-228b-46b2-a60f-95696528ce0e.png">
+      <img width="450" alt="Mobile" src="https://user-images.githubusercontent.com/82430454/201121609-a3946f60-228b-46b2-a60f-95696528ce0e.png">
     </td>
   </tr>
 </table>
