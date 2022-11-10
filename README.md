@@ -2,6 +2,9 @@
 
 ### A Responsive Netflix UI for Mobile and Web
 
+#### Web
+
+
 #### MacOS
 
 <table>
@@ -24,45 +27,20 @@
 </table>
 
 
-#### Web
-
-<table>
-  <tr>
-    <td>
-      <img width="1470" alt="Web Maximize" src="https://user-images.githubusercontent.com/82430454/196758213-8dd8e8d5-7e02-4f3b-8609-c9d0cad78823.png">
-    </td>
-  </tr>
-</table>
-
-<table>
-   <tr>
-    <td>
-      <img width="1550" alt="Web Medium width" src="https://user-images.githubusercontent.com/82430454/196757247-97c55d69-7724-44c6-8bab-fb568a6a767e.png">
-    </td>
-    <td>
-      <img width="800" alt="Web Smallest Width" src="https://user-images.githubusercontent.com/82430454/196757291-f9c263b4-21d7-4fee-8709-8363c59dd55a.png">
-    </td>
-  </tr>
-</table>
-
-
 #### Mobile
 
 <table>
   <tr>
     <td>
-      <img width="1470" alt="Web Maximize" src="https://user-images.githubusercontent.com/82430454/196758213-8dd8e8d5-7e02-4f3b-8609-c9d0cad78823.png">
+      <img width="1470" alt="Mobile" src="https://user-images.githubusercontent.com/82430454/196758213-8dd8e8d5-7e02-4f3b-8609-c9d0cad78823.png">
     </td>
   </tr>
 </table>
 
 <table>
-   <tr>
+  <tr>
     <td>
-      <img width="1550" alt="Web Medium width" src="https://user-images.githubusercontent.com/82430454/201121596-861dacb2-8c80-4809-b101-fae532dd7c9e.png">
-    </td>
-    <td>
-      <img width="800" alt="Web Smallest Width" src="https://user-images.githubusercontent.com/82430454/201121609-a3946f60-228b-46b2-a60f-95696528ce0e.png">
+      <img width="1470" alt="Mobile" src="https://user-images.githubusercontent.com/82430454/201121609-a3946f60-228b-46b2-a60f-95696528ce0e.png">
     </td>
   </tr>
 </table>
