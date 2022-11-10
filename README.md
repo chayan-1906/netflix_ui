@@ -1,16 +1,24 @@
-# netflix_ui
+# Netflix UI
 
-A new Flutter project.
+### A Responsive Netflix UI for Mobile and Web
 
-## Getting Started
+#### MacOS
 
-This project is a starting point for a Flutter application.
+<table>
+  <tr>
+    <td>
+      <img width="1470" alt="MacOS Maximize" src="https://user-images.githubusercontent.com/82430454/201120302-93370267-c818-4b78-9886-ee408c33aa7c.png">
+    </td>
+  </tr>
+</table>
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<table>
+  <tr>
+    <td>
+      <img width="1600" alt="MacOS Medium width" src="https://user-images.githubusercontent.com/82430454/201120339-e5bf2abf-562c-4d79-92ef-5d3676498c79.png">
+    </td>
+    <td>
+      <img width="1250" alt="MacOS Smallest Width" src="https://user-images.githubusercontent.com/82430454/201120378-b1a030da-99b3-48af-81dd-b71df3c6b4f4.png">
+    </td>
+  </tr>
+</table>
